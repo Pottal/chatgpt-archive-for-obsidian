@@ -1,0 +1,107 @@
+#chatgpt-obsidian-archive-controls {
+  position: fixed;
+  right: 18px;
+  bottom: 88px;
+  z-index: 2147483646;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#chatgpt-obsidian-archive-status {
+  display: none;
+  max-width: 430px;
+  border: 1px solid rgba(127, 127, 127, 0.28);
+  border-radius: 10px;
+  background: rgba(24, 24, 27, 0.96);
+  color: #fff;
+  padding: 9px 11px;
+  font-size: 12px;
+  line-height: 1.5;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#chatgpt-obsidian-archive-status[data-visible="true"] {
+  display: block;
+}
+
+.chatgpt-obsidian-archive-button-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#chatgpt-obsidian-archive-button,
+#chatgpt-obsidian-archive-diagnostics {
+  appearance: none;
+  border: 1px solid rgba(127, 127, 127, 0.35);
+  border-radius: 999px;
+  background: rgba(24, 24, 27, 0.96);
+  color: #fff;
+  min-height: 38px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+}
+
+#chatgpt-obsidian-archive-diagnostics {
+  min-height: 34px;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+#chatgpt-obsidian-archive-button:hover,
+#chatgpt-obsidian-archive-diagnostics:hover {
+  background: rgba(38, 38, 42, 0.99);
+}
+
+#chatgpt-obsidian-archive-button:disabled {
+  cursor: wait;
+  opacity: 0.78;
+}
+
+#obsidian-chatgpt-export {
+  box-sizing: border-box;
+  width: min(900px, calc(100vw - 40px));
+  margin: 32px auto 120px;
+  padding: 0 8px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+}
+
+#obsidian-chatgpt-export .chatgpt-archive-turn {
+  margin: 0 0 28px;
+}
+
+#obsidian-chatgpt-export blockquote.chatgpt-archive-user {
+  margin: 0 0 30px;
+  padding: 14px 18px;
+  border-left: 4px solid rgba(127, 127, 127, 0.65);
+  border-radius: 5px;
+  background: rgba(127, 127, 127, 0.08);
+}
+
+#obsidian-chatgpt-export blockquote.chatgpt-archive-user > p:first-child {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+#obsidian-chatgpt-export img {
+  max-width: 100%;
+  height: auto;
+}
+
+#obsidian-chatgpt-export pre {
+  overflow-x: auto;
+  white-space: pre;
+}

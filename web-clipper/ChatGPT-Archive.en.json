@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "ChatGPT Archive (EN)",
+  "behavior": "create",
+  "noteContentFormat": "## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n> [!ai]+ AI Summary\n> ## 3行要約\n{{\"Summarize this entire ChatGPT conversation in exactly three bullet points. Include not only the facts but also why each point matters.\"|blockquote}}\n>\n> ## Insight\n{{\"Write the single most interesting insight from this entire ChatGPT conversation as one declarative sentence. Start exactly with `In short, `.\"|blockquote}}\n>\n> ## keywords\n{{\"Extract reusable search keywords from this entire ChatGPT conversation as bullet points. Use the format `- keyword: short explanation`.\"|blockquote}}\n\n\n{{content|replace:\"/CHATGPTARCHIVEUSERCALLOUT/g\":\"[!question]+ User\"}}\n",
+  "properties": [
+    {
+      "name": "title",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "aliases",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "created",
+      "value": "{{date}}",
+      "type": "datetime"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "datetime"
+    },
+    {
+      "name": "modified",
+      "value": "{{schema:dateModified}}",
+      "type": "datetime"
+    },
+    {
+      "name": "author",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "summary",
+      "value": "{{\"Summarize the most important point of this entire ChatGPT conversation in one sentence, including why it matters.\"}}",
+      "type": "text"
+    },
+    {
+      "name": "topics",
+      "value": "{{\"List the topics in this entire ChatGPT conversation, separated by commas.\"}}",
+      "type": "multitext"
+    },
+    {
+      "name": "thumbnailUrl",
+      "value": "{{schema:image.url}}",
+      "type": "text"
+    },
+    {
+      "name": "reason",
+      "value": "",
+      "type": "text"
+    }
+  ],
+  "triggers": [
+    "https://chatgpt.com/c/",
+    "https://chat.openai.com/c/"
+  ],
+  "noteNameFormat": "{{title|safe_name|slice:0,60}}",
+  "path": "WebClips",
+  "context": "{{meta:name:chatgpt-archive-context}}"
+}
